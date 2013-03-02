@@ -4,6 +4,8 @@
   <remote  name="aosp"
            fetch=".."
            review="https://android-review.googlesource.com/" />
+  <remote  name="hellbentv"
+           revision="develop"/>
   <default revision="master"
            remote="aosp"
            sync-j="4" />
@@ -11,6 +13,10 @@
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="vendor/broadcom/mako" name="vendor_broadcom_mako" remote="hellbentv" revision="develop"/>
+  <project path="vendor/lge/mako" name="vendor_lge_mako" remote="hellbentv" revision="develop"/>
+  <project path="vendor/qcom/mako" name="vendor_qcom_mako" remote="hellbentv" revision="develop"/>
+
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
