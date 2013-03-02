@@ -5,6 +5,7 @@
            fetch=".."
            review="https://android-review.googlesource.com/" />
   <remote  name="hellbentv"
+           fetch=".."
            revision="develop"/>
   <default revision="master"
            remote="aosp"
